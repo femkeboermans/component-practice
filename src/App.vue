@@ -15,7 +15,9 @@
     <h2>Dynamic Components</h2>
     <button @click="selectedCmp('goal-new')">New Goal</button>
     <button @click="selectedCmp('goal-old')">Old Goal</button>
-    <component :is="selectedComponent"></component>
+    <keep-alive>
+      <component :is="selectedComponent"></component>
+    </keep-alive>
   </div>
 </template>
 
